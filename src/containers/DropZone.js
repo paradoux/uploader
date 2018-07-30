@@ -45,8 +45,8 @@ class DropZone extends React.Component {
                 let id = res.data.issue[0].diagnostics.match(/\d/g).join("")
                 console.log(name)
                 this.setState({ ...this.state, name, id })
-                this.getTotal()
             })
+            .then(this.getTotal())
             .catch((err) => {
                 console.error(err)
                 alert("Sorry, the document couldn't be uploaded")

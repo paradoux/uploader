@@ -59,11 +59,9 @@ class DropZone extends React.Component {
                 var { total } = res.data
                 if (total === this.state.total) {
                     total++
-                    this.setState({ ...this.state, total })
                 }
-                else {
-                    this.setState({ ...this.state, total })
-                }
+                this.setState({ ...this.state, total })
+
             })
     }
 
